@@ -15,7 +15,7 @@ const commentConverter = row => ({
     userName: row.user_name
 })
 
-const maxRows = 12;
+const maxRows = 6;
 
 class PhotoDao {
 

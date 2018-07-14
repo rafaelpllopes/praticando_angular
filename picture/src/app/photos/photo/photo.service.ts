@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Photo } from './photo';
-import { ActivatedRoute } from '@angular/router';
 
 const API = 'http://localhost:3000';
 
