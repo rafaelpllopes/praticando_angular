@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -10,7 +11,8 @@ import { VmessageModule } from '../shared/vmessage/vmessage.module';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    VmessageModule
+    VmessageModule,
+    RouterModule
   ],
   declarations: [ SigninComponent ]
 })

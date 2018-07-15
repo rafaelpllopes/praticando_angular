@@ -3,7 +3,7 @@
   <form [formGroup]="loginForm" class="form mt-4" (submit)="login()">
 
       <div class="form-group">
-        <input formControlName="userName" type="text" class="form-control" autofocus="autofocus" placeholder="user name">
+        <input formControlName="userName" #userNameInput type="text" class="form-control" autofocus="autofocus" placeholder="user name">
         <app-vmessage *ngIf="loginForm.get('userName').errors?.required" text="Password is required!"></app-vmessage>
       </div>
     
