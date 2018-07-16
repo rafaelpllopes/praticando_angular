@@ -1,10 +1,11 @@
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { SigninComponent } from './signin/signin.component';
 import { VmessageModule } from '../shared/vmessage/vmessage.module';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
@@ -12,8 +13,9 @@ import { VmessageModule } from '../shared/vmessage/vmessage.module';
     CommonModule,
     ReactiveFormsModule,
     VmessageModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
-  declarations: [ SigninComponent ]
+  declarations: [ SigninComponent, SignupComponent ]
 })
 export class HomeModule { }
