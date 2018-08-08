@@ -4,7 +4,7 @@ import { BehaviorSubject } from 'rxjs';
 import * as jtw_decode from 'jwt-decode';
 
 import { User } from './user';
-import { TokenService } from './../token/token.service';
+import { TokenService } from '../token/token.service';
 
 @Injectable({
   providedIn: 'root'

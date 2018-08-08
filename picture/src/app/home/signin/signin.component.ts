@@ -1,4 +1,4 @@
-import { PlatformDetectorService } from './../../core/platform-detector/platform-detector.service';
+import { PlatformDetectorService } from '../../core/platform-detector/platform-detector.service';
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';

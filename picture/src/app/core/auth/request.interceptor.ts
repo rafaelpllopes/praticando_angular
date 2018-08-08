@@ -1,4 +1,4 @@
-import { TokenService } from './../token/token.service';
+import { TokenService } from '../token/token.service';
 import { Injectable } from "@angular/core";
 import { HttpInterceptor, HttpRequest, HttpHandler, HttpSentEvent, HttpProgressEvent, HttpResponse, HttpHeaderResponse, HttpUserEvent } from "@angular/common/http";
 import { Observable } from "rxjs";
