@@ -1,3 +1,4 @@
+import { PhotoComment } from './photo-comment';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Photo } from './photo';
@@ -34,7 +35,12 @@ export class PhotoService {
       .post(`${API}/photos/upload`, formData);
   }
 
-  findById(id: string) {
-    return this.http.get<Photo>(`${API}/photos/${id}`);
+  findById(photoId: number) {
+    return this.http.get<Photo>(`${API}/photos/${photoId}`);
+  }
+
+  getComments(photoId: number) {
+    return this.http
+      .get<PhotoComment[]>(`${API}/photos/${photoId}/comments`);
   }
 }
