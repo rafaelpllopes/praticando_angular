@@ -1,3 +1,4 @@
+import { switchMap, tap } from 'rxjs/operators';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { PhotoService } from './../../photo/photo.service';
 import { PhotoComment } from './../../photo/photo-comment';
@@ -26,6 +27,14 @@ export class PhotoCommentsComponent implements OnInit {
     this.commentForm = this.formBuilder.group({
       comment: ['', [Validators.maxLength(300), Validators.required]]
     });
+  }
+
+  save() {
+    const comment = this.commentForm.get('comment').value as string;
+    this.comments$ = this.photoService
+      .addComment(this.photoId, comment)
+      .pipe(switchMap(() => this.photoService.getComments(this.photoId)))
+      .pipe(tap(() => this.commentForm.reset()));
   }
 
 }
