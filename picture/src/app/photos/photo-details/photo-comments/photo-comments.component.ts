@@ -1,7 +1,7 @@
 import { switchMap, tap } from 'rxjs/operators';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { PhotoService } from './../../photo/photo.service';
-import { PhotoComment } from './../../photo/photo-comment';
+import { PhotoService } from '../../photo/photo.service';
+import { PhotoComment } from '../../photo/photo-comment';
 import { Observable } from 'rxjs';
 import { Component, OnInit, Input } from '@angular/core';
 
