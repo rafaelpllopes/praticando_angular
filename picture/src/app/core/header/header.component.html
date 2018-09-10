@@ -1,6 +1,16 @@
 <header class="fixed-top">
   <nav class="navbar navbar-light bg-white">
-    <a class="navbar-brand">Pictutre</a>
+    <a class="navbar-brand">
+      <i tabindex="0" (keyup.space)="menu.toggle()" (click)="menu.toggle()" class="fa fa-bars mr-2"></i>
+      Pictutre
+    </a>
+    <app-menu #menu>
+      <ul class='list-unstyled'>
+        <li>
+          <a appShowIfLogged [routerLink]="['p', 'add']">Upload</a>
+        </li>
+      </ul>
+    </app-menu>
     <div *ngIf="(user$ | async) as user; else login">
       <i class="fa fa-user-circle mr-2"></i>
       <a class="mr-2">{{ user.name }}</a>
