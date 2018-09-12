@@ -4,8 +4,9 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Photo } from './photo';
 import { map, catchError } from 'rxjs/operators';
 import { of, throwError } from 'rxjs';
+import { environment } from '../../../environments/environment';
 
-const API = 'http://localhost:3000';
+const API = environment.apiUrl;
 
 @Injectable({
   providedIn: 'root'

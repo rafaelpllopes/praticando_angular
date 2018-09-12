@@ -12,7 +12,7 @@ export class AlertService {
   keepAfterRouterChange: boolean = false;
 
   constructor(private router: Router) {
-    this.router.events.subscribe(events => {
+    router.events.subscribe(event => {
       if(event instanceof NavigationStart) {
         if(this.keepAfterRouterChange) {
           this.keepAfterRouterChange = false;
